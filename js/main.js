@@ -18,6 +18,10 @@ function resizeApp()
 
     let height = window.innerHeight * (dpi_w / dpi_h);
     let width = height * game_ratio;
+
+    // scale canvas
+    canvas.style.width = width + "px";
+    canvas.style.height = height + "px";
 }
 
 function runApp() 
@@ -29,5 +33,25 @@ function runApp()
     app.start();
 
     // scale to device
+    window.addEventListener("resize", resizeApp);
+    resizeApp();
+}
 
+window.onload = function()
+{
+    "use strict";
+    // check ES6
+    try
+    {
+        eval("let i = 0;");
+        eval("const _dev = true;");
+    }
+    catch (e)
+    {
+        alert("This browser is not supported. Use Chrome or Firefox.");
+        return false;
+    }
+
+    // launch the game
+    runApp();
 }

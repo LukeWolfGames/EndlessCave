@@ -22,7 +22,7 @@ App.prototype.start = function()
         type: Phaser.AUTO,
         parent: "phaser-app",
         title: "Endless Cave",
-        url: "lukenecklace.000webhostapp.com",
+        // url: "lukenecklace.000webhostapp.com",
         width: 360 / 2, 
         height: 640 / 2,
         scene: scenes,
@@ -48,5 +48,5 @@ App.prototype.start = function()
 
 
     // sound
-    game.sound_on: true;
+    game.sound_on = true;
 }
