@@ -38,7 +38,15 @@ App.prototype.start = function()
     game.IS_DEV = this.IS_DEV;
     game.VERSION = this.VERSION;
     game.URL = "";
-    game.CONFIG = {}    
+    game.CONFIG = {
+        width: config.width,
+        eight: config.height,
+        centreX: Math.random(0.5 * config.width),
+        centreY: Math.random(0.5 * config.height),
+        tile: 16
+    }
+
 
     // sound
+    game.sound_on: true;
 }
